@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "name": "Run Android",
+      "request": "launch",
+      "runtimeArgs": [
+        "run",
+        "android"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+  ]
+}
