@@ -213,6 +213,7 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation "com.google.firebase:firebase-auth:{{ android.firebase.auth }}"
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

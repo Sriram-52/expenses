@@ -23,11 +23,13 @@ export default (state = initialState, { type, payload }) => {
         signin: {
           ...state.signin,
           loading: false,
-          data: payload,
+          data: {
+            user: payload,
+          },
         },
       };
 
-    case ACTIONS.SIGNOUT_FAILURE:
+    case ACTIONS.SIGNIN_FAILURE:
       return {
         ...state,
         signin: {

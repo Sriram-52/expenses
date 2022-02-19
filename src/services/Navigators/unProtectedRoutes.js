@@ -9,8 +9,16 @@ const Stack = createNativeStackNavigator();
 function UnProctectedRoutes() {
   return (
     <Stack.Navigator initialRouteName={routeNames.signIn}>
-      <Stack.Screen name={routeNames.signIn} component={SignIn} />
-      <Stack.Screen name={routeNames.signUp} component={SignUp} />
+      <Stack.Screen
+        name={routeNames.signIn}
+        component={SignIn}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={routeNames.signUp}
+        component={SignUp}
+        options={{ title: 'Sign Up' }}
+      />
     </Stack.Navigator>
   );
 }
