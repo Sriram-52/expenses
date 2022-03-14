@@ -5,6 +5,7 @@ const routeNames = {
 
   // protected
   groups: 'Groups',
+  createGroup: 'CreateGroup',
 };
 
 export default routeNames;

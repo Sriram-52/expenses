@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, Input } from 'native-base';
+import { Checkbox, FormControl, Input, Text } from 'native-base';
 
 export const CustomTextField = ({
   label,
@@ -25,6 +25,28 @@ export const CustomTextField = ({
       {isInvalid && (
         <FormControl.ErrorMessage>{errorMsg}</FormControl.ErrorMessage>
       )}
+    </FormControl>
+  );
+};
+
+export const CustomSelect = ({ label, values, onChange, items }) => {
+  return (
+    <FormControl>
+      <FormControl.Label>{label}</FormControl.Label>
+      <Checkbox.Group
+        mt="2"
+        colorScheme="green"
+        onChange={onChange}
+        defaultValue={values}
+        alignItems="flex-start">
+        {items.map(item => {
+          return (
+            <Checkbox my="1" key={item.id} value={item.value}>
+              {item.displayName}
+            </Checkbox>
+          );
+        })}
+      </Checkbox.Group>
     </FormControl>
   );
 };
